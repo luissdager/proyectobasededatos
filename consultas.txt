@@ -1,0 +1,29 @@
+integrantes: luis simanca
+	     leonardo horta
+	     federico terrill
+
+===== CONSULTAS sql ======
+SELECT nombre FROM asignatura WHERE creditos BETWEEN 2 AND 5 // decuelve el nombre de las asignaturas que esten entre 2 y 5 creidtos incluyedno estos
+
+SELECT nombre,creditos FROM asignatura WHERE creditos=6   // devuelve el nombre de la asignatura con mayor o mayores creditos
+
+SELECT nombre,creditos FROM asignatura WHERE creditos=2 // devuelve el nombre de la asignatura con menor o menores creditos
+
+SELECT SUM(creditos) FROM asignatura           // devuelve la suma de todos los creditos de las materias registradas
+
+SELECT AVG(creditos) FROM asignatura           // devuelve la media de los creditos de las materias registradas
+
+SELECT COUNT(*) FROM asignatura                // devuelve el numero de materias registradas
+
+SELECT creditos FROM asignatura WHERE nombre LIKE 'Ma%'   // devuelve el numero de creditos de los nombres de las asignatiras que empiecen por"Ma" 
+
+SELECT * FROM asignatura WHERE nombre IN ('Matematicas')  // devulve el todas las caracteristicas de las materias que se llamen matematicas 
+
+SELECT id FROM asignatura WHERE nombre NOT IN ('Matematicas')  // devuelve el id de todas las materias que no se llamen Matematicas 
+
+SELECT nombre FROM plan WHERE año BETWEEN 2003 AND 2014     // devuelve el nombre de las materias que esten entre los años 2015 y 2018
+
+SELECT nombre,creditos FROM asignatura WHERE id_plan=1 AND semestre=1 // muestra nombre y creditos que esta en la asignatura mientras el id-plan sea 1 y el semestre sea 1
+
+SELECT SUM(creditos) FROM asignatura where id_plan=1 AND semestre=1  // suma los creditos de las materias que estan en el plan1 y semestre 1
+SELECT nombre, creditos FROM asignatura WHERE nombre LIKE 'investigacion%'// muestra el nombre y los creditos de las materias que se llamen investigacion
